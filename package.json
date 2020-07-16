@@ -6,7 +6,18 @@
 	"bin": {
 		"parcelreactGen": "./installer.js"
 	},
-	"keywords": [],
+	"keywords": [
+		"expressjs",
+		"express",
+		"reactjs",
+		"typescript",
+		"parcel",
+		"sass",
+		"template",
+		"parcel react template",
+		"passportjs",
+		"parcel react template typescript"
+	],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
