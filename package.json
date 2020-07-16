@@ -1,6 +1,6 @@
 {
 	"name": "parcelreacttstemplateinstaller",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"description": "A template for react apps with parcel and typescript.",
 	"main": "index.js",
 	"bin": {
