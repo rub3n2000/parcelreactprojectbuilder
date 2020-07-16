@@ -1,0 +1,5 @@
+@import './GlobalVariables.module.scss';
+
+@function f_color($color-name) {
+    @return map-get($colors, $color-name);
+}

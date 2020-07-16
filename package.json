@@ -1,0 +1,21 @@
+{
+	"name": "parcelreacttstemplateinstaller",
+	"version": "1.5.0",
+	"description": "A template for react apps with parcel and typescript.",
+	"main": "index.js",
+	"bin": {
+		"parcelreactGen": "./installer.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rub3n2000/parcelreacttstemplate/issues"
+	},
+	"homepage": "https://github.com/rub3n2000/parcelreacttstemplate#readme",
+	"dependencies": {
+		"inquirer": "^7.3.2",
+		"ncp": "*"
+	},
+	"devDependencies": {}
+}

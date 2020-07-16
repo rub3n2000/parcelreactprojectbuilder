@@ -1,0 +1,23 @@
+{
+	"name": "expressreact",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"startDev": "node server.js",
+		"preStart": "npm install && cd client && npm install && cd ..",
+		"start": "cd client && npm run cleanBuild && cd .. && node server.js",
+		"server": "nodemon --ignore client/dist* --exec npm start"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"express-route": "*"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4",
+		"rimraf": "^3.0.2"
+	}
+}

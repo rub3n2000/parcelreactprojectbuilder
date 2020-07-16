@@ -1,0 +1,4 @@
+{
+	"ext": "ts,tsx,js,scss,css",
+	"ignore": ["client/"]
+}
