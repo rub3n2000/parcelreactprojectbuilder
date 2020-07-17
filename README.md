@@ -7,6 +7,11 @@ As well as options for express backend as wrapper api combo,
 
 works like cra, filling out the template for you with one command.
 
+**Express backends are in js while frontends in ts. Feel free to change that.**
+Personally my backends are usually quite simple, and my main use of typescript,
+is being able to know what I will receive from the api, as the api defines the models,
+with explicit typing for mongoose. As well as knowing what I am receiving in my props.
+
 ## Install instructions
         npm install -g parcelreacttstemplateinstaller
 or
