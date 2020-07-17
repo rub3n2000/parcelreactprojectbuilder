@@ -1,6 +1,11 @@
 # parcelreacttstemplate
 
-A template for react apps with parcel and typescript.
+A cra alternative, template builder for react apps with parcel and typescript.
+
+As well as options for express backend as wrapper api combo,
+ or even prebuilt auth for express and react.
+
+works like cra, filling out the template for you with one command.
 
 ## Install instructions
         npm install -g parcelreacttstemplateinstaller
