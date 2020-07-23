@@ -1,4 +1,4 @@
-# parcelreacttstemplate
+# Parcel-React Project-Builder w/ express backend alternatives.
 
 A cra alternative, template builder for react apps with parcel and typescript.
 
