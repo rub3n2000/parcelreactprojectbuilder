@@ -1,7 +1,7 @@
 {
 	"name": "parcelreacttstemplateinstaller",
-	"version": "2.2.0",
-	"description": "A template for react apps with parcel and typescript.",
+	"version": "2.3.0",
+	"description": "A project generator cra alternative, for react apps with parcel and typescript.",
 	"main": "index.js",
 	"bin": {
 		"parcelreactGen": "./installer.js"
@@ -12,6 +12,8 @@
 		"reactjs",
 		"typescript",
 		"parcel",
+		"dotnet",
+		"dotnet core",
 		"sass",
 		"template",
 		"parcel react template",
@@ -21,9 +23,9 @@
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/rub3n2000/parcelreacttstemplate/issues"
+		"url": "https://github.com/rub3n2000/parcelreactprojectbuilder/issues"
 	},
-	"homepage": "https://github.com/rub3n2000/parcelreacttstemplate#readme",
+	"homepage": "https://github.com/rub3n2000/parcelreactprojectbuilder#readme",
 	"dependencies": {
 		"inquirer": "^7.3.2",
 		"ncp": "*"
