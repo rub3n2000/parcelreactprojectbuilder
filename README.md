@@ -44,20 +44,22 @@ and the frontend starts with a login form / register form, and redirects to the 
 
 **dotnetReact**: A dotnet core 3.1 wrapper project, where you can put your api's. Serving a parcel react empty frontend, at /. 
                 x unit test folders also included, for those who wish to do unit and integration testing on the backend.
-                The least optimal template, wish I could find a way to force all api's to be served at /api and not the default,
-                /{controllername} path. Also unsure how well react-router will work with it, you might have to cheat by having a
+                The least optimal template, wish I could find a way to force all api's to be served at /api/{routedefinedincontroller},
+                instead of {routedefinedincontroller}. Also unsure how well react-router will work with it, you might have to cheat by having a
                 usestate with a string representing the current url, which you change when you press stuff in navbar. Then serving,
                 different components in app based on that string. Would love to find a more optimal way of doing this template.
                 Anyone have some tips contact me.
-                For now I consider this experimental. This one might be better: [react-spa](https://github.com/NetCoreTemplates/react-spa).
+                For now I consider this *experimental*. This one might be better: [react-spa](https://github.com/NetCoreTemplates/react-spa).
 
 ## Running the app
 
+#### Clean Frontend
 To start cleanfrontend simply do npm start. 
 It will hot-restart as you make changes.
 Cleanfrontend doesn't include an api, so as long as the client appears to be working you are all good there.
 _______________________________________________
 
+#### Express Backend wrapper(withBackendWrapper) or withAuth
 To start withBackendWrapper or withAuth simply do
                 npm run preStart
 that installs the npm packages neccesary in the client folder as well as server.
@@ -78,6 +80,7 @@ setup a mongodb database or equivelent in server.js. It is set by default to you
 if you happen to have one running you can just use that one.
 ________________________________________________________________________________________________________________
 
+#### Dotnet React
 To start dotnetReact simply do
 npm run preStart
 that installs the npm packages neccesary in the Frontend folder as well as dotnet restore.
