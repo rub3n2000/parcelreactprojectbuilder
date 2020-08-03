@@ -31,7 +31,7 @@ and the feedback isn't great. Wait for it to display done, no progress bar unfor
 
 It will ask you which type of project you want to generate.
 
-#### Currently there are four types included:
+#### Currently there are five types included:
 
 **cleanfrontend**: a parcel, react, typescript frontend with eslint and sass.
 
@@ -46,6 +46,11 @@ and the frontend starts with a login form / register form, and redirects to the 
                 api at /api/{controllername}/{action}/{id}.
                 only routes prefixed by /api/ will not return frontend.
                 x unit test folders also included, for those who wish to do unit and integration testing on the backend.
+
+**dotnetReactWOData**: A Dotnet core 3.1 wrapper project, with OData. Serving a parcel react empty frontend at /* and
+                       api at /api/{controllername}/{action}/{id}.
+                       Only routes prefixed by /api/ will not return frontend.
+                       x unit test folders also included, for those who wish to do unit and integration testing on the backend.
 
 ## Running the app
 
@@ -92,3 +97,23 @@ It will hot-restart when you change files in frontend, or backend.
 To test that the api works, and not only the frontend, you can do
 localhost:5000/api/WeatherForecast on the dotnetReact app. If you get some json temperature forecast filler info,
 you are all set.
+
+#### Dotnet React with OData.
+To start dotnetReact simply do
+npm run preStart
+that installs the npm packages neccesary in the Frontend folder as well as dotnet restore.
+
+Therefore you only have to run it the first time, and everytime you add a new npm package to,
+the package.json within Frontend, instead of using npm install --save within the client folder.
+
+After installing the packages do 
+                npm run server
+To run the actual server serving the app.
+It will hot-restart when you change files in frontend, or backend.
+
+To test that the api works, and not only the frontend, you can do
+localhost:5000/api/WeatherForecast on the dotnetReact app. If you get some json temperature forecast filler info,
+you are all set.
+
+You can then do localhost:5000/api/WeatherForecast?$Select=id to make sure odata is working.
+Frontend should be at any route that doesnt start with /api/.
