@@ -36,6 +36,9 @@ namespace DotnetReact
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllersWithViews(o => {
+                o.UseGeneralRoutePrefix("api/");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,8 +57,10 @@ namespace DotnetReact
             
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
+            {   
+                endpoints.MapControllerRoute(name: "default",
+                            pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapFallbackToFile("index.html");
             });
             
         }

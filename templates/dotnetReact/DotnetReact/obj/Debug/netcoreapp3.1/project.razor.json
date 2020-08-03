@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\parcelreacttstemplate\\templates\\dotnetReact\\DotnetReact\\DotnetReact.csproj",
+  "FilePath": "c:\\Users\\Ruben\\Desktop\\parcelreactprojectbuilder\\templates\\dotnetReact\\DotnetReact\\DotnetReact.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20516,7 +20516,7 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 800
+    "CSharpLanguageVersion": 703
   },
   "RootNamespace": "DotnetReact",
   "Documents": [],

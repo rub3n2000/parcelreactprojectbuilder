@@ -42,14 +42,10 @@ the cleanfrontend.
 **withAuth**: same as withBackendWrapper, except the backend has premade auth routes using passportjs,
 and the frontend starts with a login form / register form, and redirects to the app when you are logged in.
 
-**dotnetReact**: A dotnet core 3.1 wrapper project, where you can put your api's. Serving a parcel react empty frontend, at /. 
+**dotnetReact**: A dotnet core 3.1 wrapper project, where you can put your api's. Serving a parcel react empty frontend, at /* and
+                api at /api/{controllername}/{action}/{id}.
+                only routes prefixed by /api/ will not return frontend.
                 x unit test folders also included, for those who wish to do unit and integration testing on the backend.
-                The least optimal template, wish I could find a way to force all api's to be served at /api/{routedefinedincontroller},
-                instead of {routedefinedincontroller}. Also unsure how well react-router will work with it, you might have to cheat by having a
-                usestate with a string representing the current url, which you change when you press stuff in navbar. Then serving,
-                different components in app based on that string. Would love to find a more optimal way of doing this template.
-                Anyone have some tips contact me.
-                For now I consider this *experimental*. This one might be better: [react-spa](https://github.com/NetCoreTemplates/react-spa).
 
 ## Running the app
 
@@ -94,5 +90,5 @@ To run the actual server serving the app.
 It will hot-restart when you change files in frontend, or backend.
 
 To test that the api works, and not only the frontend, you can do
-localhost:5000/WeatherForecast on the dotnetReact app. If you get some json temperature forecast filler info,
+localhost:5000/api/WeatherForecast on the dotnetReact app. If you get some json temperature forecast filler info,
 you are all set.
