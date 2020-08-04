@@ -1,36 +1,40 @@
 {
-	"name": "parcelreacttstemplateinstaller",
-	"version": "2.4.4",
-	"description": "A project generator cra alternative, for react apps with parcel and typescript.",
-	"main": "index.js",
-	"bin": {
-		"parcelreactGen": "./installer.js"
-	},
-	"keywords": [
-		"expressjs",
-		"express",
-		"reactjs",
-		"typescript",
-		"parcel",
-		"dotnet",
-		"dotnet core",
-		"sass",
-		"template",
-		"parcel react template",
-		"passportjs",
-		"parcel react template typescript",
-		"odata",
-		"OData"
-	],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/rub3n2000/parcelreactprojectbuilder/issues"
-	},
-	"homepage": "https://github.com/rub3n2000/parcelreactprojectbuilder#readme",
-	"dependencies": {
-		"inquirer": "^7.3.2",
-		"ncp": "*"
-	},
-	"devDependencies": {}
+    "name": "parcelreacttstemplateinstaller",
+    "version": "2.5.4",
+    "description": "A project generator cra alternative, for react apps with parcel and typescript.",
+    "main": "index.js",
+    "bin": {
+        "parcelreactGen": "./installer.js"
+    },
+    "keywords": [
+        "expressjs",
+        "express",
+        "reactjs",
+        "typescript",
+        "parcel",
+        "dotnet",
+        "dotnet core",
+        "sass",
+        "template",
+        "parcel react template",
+        "passportjs",
+        "parcel react template typescript",
+        "odata",
+        "OData",
+        "auth",
+        "Auth",
+        "Prebuilt auth",
+        "PrebuiltAuth"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rub3n2000/parcelreactprojectbuilder/issues"
+    },
+    "homepage": "https://github.com/rub3n2000/parcelreactprojectbuilder#readme",
+    "dependencies": {
+        "inquirer": "^7.3.2",
+        "ncp": "*"
+    },
+    "devDependencies": {}
 }

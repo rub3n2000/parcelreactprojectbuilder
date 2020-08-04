@@ -6,7 +6,6 @@ As well as options for express backend as wrapper api combo,
  or even prebuilt auth for express and react.
 
 Now you can replace the express backend with a dotnet core 3.1 backend wrapper.
-Prebuilt auth for dotnet core 3.1 not included at the moment.
 
 works like cra, filling out the template for you with one command.
 
@@ -31,7 +30,7 @@ and the feedback isn't great. Wait for it to display done, no progress bar unfor
 
 It will ask you which type of project you want to generate.
 
-#### Currently there are five types included:
+#### Currently there are six types included:
 
 **cleanfrontend**: a parcel, react, typescript frontend with eslint and sass.
 
@@ -51,6 +50,14 @@ and the frontend starts with a login form / register form, and redirects to the 
                        api at /api/{controllername}/{action}/{id}.
                        Only routes prefixed by /api/ will not return frontend.
                        x unit test folders also included, for those who wish to do unit and integration testing on the backend.
+
+**dotnetReactwAuth** A Dotnet core 3.1 wrapper project, with prebuilt auth in backend and frontend. It serves a parcel react frontend,
+                     with a login form and register form, and a secret page you must login to see, at /*. While it serves  
+                     api at /api/{controllername}/{action}/{id}.
+                     Only routes prefixed by /api/ will not return frontend.
+                     x unit test folders also included, for those who wish to do unit and integration testing on the backend.
+                     Default database is a local sqlite db that gets created within the project. Feel free to replace it.
+
 
 ## Running the app
 
@@ -117,3 +124,17 @@ you are all set.
 
 You can then do localhost:5000/api/WeatherForecast?$Select=id to make sure odata is working.
 Frontend should be at any route that doesnt start with /api/.
+
+#### Dotnet React with auth.
+To start dotnetReact simply do
+npm run preStart
+that installs the npm packages neccesary in the Frontend folder as well as dotnet restore, migrating db and updating it.
+
+Therefore you only have to run it the first time.
+
+After installing the packages do 
+                npm run server
+To run the actual server serving the app.
+It will hot-restart when you change files in frontend, or backend.
+
+To test that the api works, and not only the frontend, you can simply attempt to register and then login at /*.
