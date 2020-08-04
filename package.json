@@ -1,6 +1,6 @@
 {
 	"name": "parcelreacttstemplateinstaller",
-	"version": "2.4.3",
+	"version": "2.4.4",
 	"description": "A project generator cra alternative, for react apps with parcel and typescript.",
 	"main": "index.js",
 	"bin": {
@@ -18,7 +18,9 @@
 		"template",
 		"parcel react template",
 		"passportjs",
-		"parcel react template typescript"
+		"parcel react template typescript",
+		"odata",
+		"OData"
 	],
 	"author": "",
 	"license": "ISC",
