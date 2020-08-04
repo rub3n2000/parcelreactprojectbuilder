@@ -1,0 +1,46 @@
+{
+	"name": "parcelreacttstemplate",
+	"version": "1.0.0",
+	"description": "A template for react apps with parcel and typescript.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "parcel public/index.html --open --port 3001",
+		"build": "parcel build public/index.html --out-dir ../wwwroot --no-source-maps",
+		"cleanBuild": "rimraf ../wwwroot && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rub3n2000/parcelreacttstemplate.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rub3n2000/parcelreacttstemplate/issues"
+	},
+	"homepage": "https://github.com/rub3n2000/parcelreacttstemplate#readme",
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "*",
+		"@fortawesome/free-solid-svg-icons": "*",
+		"@fortawesome/react-fontawesome": "*",
+		"@types/jwt-decode": "^2.2.1",
+		"@types/react": "^16.9.43",
+		"@types/react-dom": "^16.9.8",
+		"axios": "*",
+		"jwt-decode": "^2.2.0",
+		"node-sass": "*",
+		"parcel-bundler": "^1.12.4",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.6.1",
+		"@typescript-eslint/parser": "^2.34.0",
+		"eslint": "^7.3.1",
+		"eslint-plugin-react": "^7.20.0",
+		"rimraf": "^3.0.2",
+		"sass": "^1.26.10",
+		"typescript": "^3.9.6"
+	}
+}
