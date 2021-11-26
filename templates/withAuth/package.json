@@ -7,23 +7,23 @@
 		"startDev": "node server.js",
 		"preStart": "npm install && cd client && npm install && cd ..",
 		"start": "cd client && npm run cleanBuild && cd .. && node server.js",
-		"server": "nodemon --ignore client/dist* --exec npm start"
+		"server": "nodemon --ignore client/distlatest --exec npm start"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"body-parser": "*",
-		"express": "*",
-		"express-route": "*",
-		"express-session": "*",
-		"jsonwebtoken": "*",
-		"mongoose": "*",
-		"passport": "*",
-		"passport-local": "*",
-		"passport-local-mongoose": "*"
+		"body-parser": "latest",
+		"express": "latest",
+		"express-route": "latest",
+		"express-session": "latest",
+		"jsonwebtoken": "latest",
+		"mongoose": "latest",
+		"passport": "latest",
+		"passport-local": "latest",
+		"passport-local-mongoose": "latest"
 	},
 	"devDependencies": {
-		"nodemon": "*",
-		"rimraf": "*"
+		"nodemon": "latest",
+		"rimraf": "latest"
 	}
 }

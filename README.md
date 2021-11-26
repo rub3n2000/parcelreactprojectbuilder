@@ -73,7 +73,7 @@ and the frontend starts with a login form / register form, and redirects to the 
 ## Running the app
 
 #### Clean Frontend
-To start cleanfrontend simply do npm start. 
+To start cleanfrontend simply do npm install then npm start. 
 It will hot-restart as you make changes.
 Cleanfrontend doesn't include an api, so as long as the client appears to be working you are all good there.
 _______________________________________________
