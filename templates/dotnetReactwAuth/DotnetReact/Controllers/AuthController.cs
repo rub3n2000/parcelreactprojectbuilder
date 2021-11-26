@@ -31,6 +31,11 @@ public class AuthController : ControllerBase
             this._config = config;
         }
 
+        [HttpGet("authenticate")]
+        public IActionResult Authenticate() {
+            return Ok();
+        }
+
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForAuth userForRegisterDto)
