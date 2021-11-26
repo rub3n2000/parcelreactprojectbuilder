@@ -82,7 +82,7 @@ namespace DotnetReact
 
             app.UseStaticFiles();
             
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseRouting();
             
             app.UseAuthorization();

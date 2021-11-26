@@ -28,6 +28,9 @@ in the terminal.
 **Please be patient as generating the actual project might take a little while,
 and the feedback isn't great. Wait for it to display done, no progress bar unfortunately.**
 
+**All dotnet projects have a line in startup.cs that is commented out enforcing httpsredirect. 
+Should be uncommented before being published to a online host of any kind.**
+
 It will ask you which type of project you want to generate.
 
 #### Currently there are seven types included:
