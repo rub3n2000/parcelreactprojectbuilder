@@ -11,11 +11,7 @@ const userRoutes = require("./User/Routes");
 const secrets = require("./secrets");
 
 const app = express(); //replace with your mongodb connection string.
-mongoose.connect("mongodb://localhost:27017/myapp", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-});
+mongoose.connect("mongodb://localhost:27017/myapp");
 //#endregion
 
 //#region  App setup statements
