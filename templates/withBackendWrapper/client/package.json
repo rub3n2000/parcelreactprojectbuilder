@@ -21,20 +21,20 @@
 	},
 	"homepage": "https://github.com/rub3n2000/parcelreacttstemplate#readme",
 	"dependencies": {
-		"@types/react": "^16.9.43",
-		"@types/react-dom": "^16.9.8",
-		"parcel-bundler": "^1.12.4",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"parcel-bundler": "*",
+		"react": "*",
+		"react-dom": "*",
 		"axios": "*"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^3.6.1",
-		"@typescript-eslint/parser": "^2.34.0",
-		"eslint": "^7.3.1",
-		"eslint-plugin-react": "^7.20.0",
-		"rimraf": "^3.0.2",
-		"sass": "^1.26.10",
-		"typescript": "^3.9.6"
+		"@typescript-eslint/eslint-plugin": "*",
+		"@typescript-eslint/parser": "*",
+		"eslint": "*",
+		"eslint-plugin-react": "*",
+		"rimraf": "*",
+		"sass": "*",
+		"typescript": "*"
 	}
 }

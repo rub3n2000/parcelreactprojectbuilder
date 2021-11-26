@@ -6,12 +6,12 @@
 	"scripts": {
 		"start": "cd DotnetReact && cd Frontend && npm run cleanBuild && cd .. && dotnet run",
 		"server": "nodemon --exec npm start",
-		"preStart": "npm install && cd DotnetReact && dotnet restore && dotnet ef migrations add initial && dotnet ef database update && cd Frontend && npm install && cd .. && cd.."
+		"preStart": "npm install && dotnet restore && cd DotnetReact && dotnet tool restore && dotnet ef migrations add initial  && dotnet ef database update && cd Frontend && npm install && cd .. && cd.."
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"nodemon": "^2.0.4",
-		"rimraf": "^3.0.2"
+		"nodemon": "*",
+		"rimraf": "*"
 	}
 }

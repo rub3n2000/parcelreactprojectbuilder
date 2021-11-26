@@ -24,23 +24,23 @@
 		"@fortawesome/fontawesome-svg-core": "*",
 		"@fortawesome/free-solid-svg-icons": "*",
 		"@fortawesome/react-fontawesome": "*",
-		"@types/jwt-decode": "^2.2.1",
-		"@types/react": "^16.9.43",
-		"@types/react-dom": "^16.9.8",
-		"axios": "*",
-		"jwt-decode": "^2.2.0",
+		"@types/jwt-decode": "*",
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"axios": "^0.24.0",
+		"jwt-decode": "*",
 		"node-sass": "*",
-		"parcel-bundler": "^1.12.4",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
+		"parcel-bundler": "*",
+		"react": "*",
+		"react-dom": "*"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^3.6.1",
-		"@typescript-eslint/parser": "^2.34.0",
-		"eslint": "^7.3.1",
-		"eslint-plugin-react": "^7.20.0",
-		"rimraf": "^3.0.2",
-		"sass": "^1.26.10",
-		"typescript": "^3.9.6"
+		"@typescript-eslint/eslint-plugin": "*",
+		"@typescript-eslint/parser": "*",
+		"eslint": "*",
+		"eslint-plugin-react": "*",
+		"rimraf": "*",
+		"sass": "*",
+		"typescript": "*"
 	}
 }
