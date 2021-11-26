@@ -23,7 +23,6 @@
 		"passport-local-mongoose": "latest"
 	},
 	"devDependencies": {
-		"nodemon": "latest",
-		"rimraf": "latest"
+		"nodemon": "latest"
 	}
 }

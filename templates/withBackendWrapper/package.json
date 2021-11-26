@@ -17,7 +17,6 @@
 		"express-route": "latest"
 	},
 	"devDependencies": {
-		"nodemon": "latest",
-		"rimraf": "latest"
+		"nodemon": "latest"
 	}
 }
