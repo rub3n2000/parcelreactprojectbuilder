@@ -1,6 +1,6 @@
 {
     "name": "parcelreacttstemplateinstaller",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "A project generator cra alternative, for react apps with parcel and typescript.",
     "main": "index.js",
     "bin": {
