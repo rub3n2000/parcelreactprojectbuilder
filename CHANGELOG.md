@@ -1,4 +1,4 @@
-## 3.0.1 (November 26, 2021)
+## 3.0.1 (November 27, 2021)
 
 ### All Templates ParcelReactGenerator
 
