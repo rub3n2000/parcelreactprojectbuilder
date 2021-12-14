@@ -1,0 +1,11 @@
+{
+	"ext": "ts,tsx,js,scss,css, c sharp, c#, csharp, cs",
+	"ignore": [
+		"wwwroot*",
+		"/wwwroot",
+		"/wwwroot*",
+		"wwwroot/*",
+		"Frontend/dist",
+		"Frontend/.cache"
+	]
+}

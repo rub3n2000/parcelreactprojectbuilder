@@ -1,0 +1,16 @@
+.App {
+	display: flex;
+	min-width: 100%;
+	min-height: 100%;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	div {
+		margin: 2%;
+	}
+
+	.LogoutButton {
+		color: blue;
+	}
+}

@@ -1,18 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.FileProviders;
-using System.IO;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.OData.Edm;
 using Microsoft.AspNet.OData.Builder;
@@ -22,19 +13,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
 using DotnetReact.Models;
-using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace DotnetReact
 {
     public class Startup
     {
-        private const string ROUTE_PREFIX = "";
-
-        private readonly string[] FRONTEND_ROUTES = {
-            $"{ROUTE_PREFIX}",
-            $"{ROUTE_PREFIX}/"
-        };
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -67,8 +50,7 @@ namespace DotnetReact
                 }
             );
 
-            services.AddControllers(mvcOptions => 
-                mvcOptions.EnableEndpointRouting = false);
+            services.AddControllers(options => options.UseGeneralRoutePrefix("/api"));
             services.AddOData();
         }
 
@@ -83,18 +65,18 @@ namespace DotnetReact
             app.UseStaticFiles();
             
             //app.UseHttpsRedirection();
+
             app.UseRouting();
-            
+
             app.UseAuthorization();
             app.UseAuthentication();
-            app.UseMvc(routeBuilder =>
-            {
-                routeBuilder.Select().Filter();
-                routeBuilder.MapODataServiceRoute("odata", "api", GetEdmModel());
-                routeBuilder.MapRoute(name: "default",
-                            template: "api/{controller}/{action}/{id?}");
-                routeBuilder.MapSpaFallbackRoute("spa", defaults: new { controller = "Home", action = "Index" });
-                routeBuilder.EnableDependencyInjection();
+
+            app.UseEndpoints(endpoints => {
+                endpoints.Select().Filter();
+                endpoints.MapODataRoute("odata", "api", GetEdmModel());
+                endpoints.MapControllerRoute(name: "default",
+                            pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapFallbackToFile("index.html");
             });
 
             IEdmModel GetEdmModel()
@@ -104,7 +86,6 @@ namespace DotnetReact
                 odataBuilder.EntitySet<User>("Users");
                 return odataBuilder.GetEdmModel();
             }
-            
         }
     }
 }

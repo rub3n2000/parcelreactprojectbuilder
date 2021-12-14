@@ -7,17 +7,14 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using DotnetReact.Models.Dto;
-using System;
-using Microsoft.AspNet.OData;
 using Microsoft.AspNet.OData.Routing;
 
 namespace DotnetReact.Controllers
 {
-
-[Route("[controller]")]
-[ApiController]
 [Authorize]
-public class UsersController : ODataController
+[ApiController]
+[Route("[controller]")]
+public class UsersController : Controller
 {       
         private readonly IAuthRepository _repo;
         private readonly IMapper _mapper;
@@ -26,7 +23,7 @@ public class UsersController : ODataController
             this._mapper = mapper;
         }
         [AllowAnonymous]
-        [HttpGet][EnableQuery]
+        [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _repo.GetUsers();

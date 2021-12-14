@@ -1,0 +1,16 @@
+{
+    "name": "dotnetreact",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "cd DotnetReact && cd Frontend && npm run cleanBuild && cd .. && dotnet run",
+        "server": "nodemon --exec npm start",
+        "preStart": "npm install && dotnet restore && cd DotnetReact && cd Frontend && npm install && cd .. && cd.."
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "latest"
+    }
+}

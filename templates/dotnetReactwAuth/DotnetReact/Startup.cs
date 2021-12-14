@@ -13,13 +13,6 @@ namespace DotnetReact
 {
     public class Startup
     {
-        private const string ROUTE_PREFIX = "";
-
-        private readonly string[] FRONTEND_ROUTES = {
-            $"{ROUTE_PREFIX}",
-            $"{ROUTE_PREFIX}/"
-        };
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -65,7 +58,6 @@ namespace DotnetReact
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseDefaultFiles();
             app.UseStaticFiles();
             
             //app.UseHttpsRedirection();

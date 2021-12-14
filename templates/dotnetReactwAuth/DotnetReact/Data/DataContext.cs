@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using DotnetReact.Models;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DotnetReact.Data
 {

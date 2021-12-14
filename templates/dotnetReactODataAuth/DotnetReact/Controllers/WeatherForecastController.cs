@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace DotnetReact.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     public class WeatherForecastController : ODataController
     {
         private static readonly string[] Summaries = new[]
@@ -30,6 +26,7 @@ namespace DotnetReact.Controllers
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
+                Id = rng.Next(1,10),
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]

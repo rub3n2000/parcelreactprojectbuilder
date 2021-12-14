@@ -1,0 +1,161 @@
+@import "../Sass/GlobalFunctions.scss";
+@import "../Sass/GlobalMixins.scss";
+
+.LoginDiv {
+	background-color: f_color(primary);
+	min-height: 100vh;
+	width: 100vw;
+	height: 100%;
+	min-width: 100vw;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	.LoginHeader {
+		color: white;
+	}
+
+	.Success {
+		background-color: f_color(secondary);
+		color: green;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 1%;
+	}
+
+	.Failure {
+		background-color: f_color(secondary);
+		color: red;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 1%;
+	}
+}
+
+.LoginForm {
+	min-height: 35vh;
+	max-height: 90vh;
+	width: 80vw;
+	background-color: f_color(secondary);
+	label {
+		display: block;
+		color: f_color(primary);
+		padding: 10%;
+		text-align: center;
+		font-size: 1.25em;
+		input {
+			display: block;
+			margin: 5% auto;
+			width: 80%;
+			background-color: f_color(primary);
+			font-size: 1.2em;
+			color: white;
+		}
+		input:focus {
+			border: 5px solid f_color(fifth);
+		}
+		input:invalid {
+			border: 10pxx solid f_color(red);
+		}
+	}
+	.LoginButton {
+		display: flex;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		padding-bottom: 20%;
+		padding-top: 10%;
+		button {
+			background-color: f_color(primary);
+			color: white;
+			width: 70%;
+			min-height: 50%;
+			font-size: 2em;
+			font-weight: 500;
+			padding: 2%;
+		}
+		button:hover {
+			border: 2px solid f_color(third);
+		}
+		button:active {
+			box-shadow: 0 4px f_color(fifth);
+			transform: translateY(4px);
+		}
+	}
+}
+
+@include desktop {
+	.LoginDiv {
+		background-color: f_color(primary);
+		width: 100vw;
+		min-width: 100vw;
+		.Success {
+			background-color: f_color(secondary);
+			color: green;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.Failure {
+			background-color: f_color(secondary);
+			color: red;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+
+	.LoginForm {
+		min-height: 35vh;
+		max-height: 60vh;
+		width: 33vw;
+		background-color: f_color(secondary);
+		label {
+			display: block;
+			color: white;
+			padding: 2%;
+			text-align: center;
+			font-size: 1.25em;
+			input {
+				display: block;
+				margin: 5% auto;
+				width: 80%;
+				background-color: f_color(primary);
+				font-size: 1.2em;
+				color: white;
+			}
+			input:focus {
+				border: 5px solid f_color(fifth);
+			}
+			input:invalid {
+				border: 10pxx solid f_color(red);
+			}
+		}
+		.LoginButton {
+			display: flex;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+			justify-items: center;
+			padding-bottom: 5%;
+			padding-top: 5%;
+			button {
+				background-color: f_color(primary);
+				color: white;
+				width: 70%;
+				min-height: 50%;
+				font-size: 2em;
+				font-weight: 500;
+				padding: 2%;
+			}
+			button:hover {
+				border: 2px solid f_color(third);
+			}
+			button:active {
+				box-shadow: 0 4px f_color(fifth);
+				transform: translateY(4px);
+			}
+		}
+	}
+}
