@@ -8,7 +8,6 @@
 ## Next Up
 
 * Improve auth for expressjs auth and dotnet auth templates (proper jwt implementation)
-* Add dotnet 6 minimal api templates with and without oData and auth.
 
 ## 3.0.1 (November 27, 2021)
 
