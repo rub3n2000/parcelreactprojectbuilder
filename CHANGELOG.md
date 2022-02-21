@@ -1,6 +1,7 @@
 ## 3.2.0 (February 22, 2022)
 
 * Added a dotnet react auth project template for rsa token authentication.
+* Fixed and implemented hmac jwt tokens properly on all other dotnet api's.
 
 ## 3.1.0 (December 14, 2021)
 
