@@ -25,13 +25,21 @@ simply type:
         **parcelreactGen**
 in the terminal.
 
-**Please be patient as generating the actual project might take a little while,
-and the feedback isn't great. Wait for it to display done, no progress bar unfortunately.**
+**Please be patient as generating the actual project might take a little while,**
+**and the feedback isn't great. Wait for it to display done, no progress bar unfortunately.**
 
-**All dotnet projects have a line in startup.cs that is commented out enforcing httpsredirect. 
-Should be uncommented before being published to a online host of any kind.**
+**All dotnet projects have a line in startup.cs that is commented out enforcing httpsredirect.**
+**Should be uncommented before being published to a online host of any kind.**
 
-It will ask you which type of project you want to generate.
+**All dotnet auth projects have a appsettings.json with Token or RsaPrivateKey and RsaPublicKey.**
+**Token should be replaced with a new random long string of characters, RsaPrivateKey and RsaPublicKey**
+**should be replaced with newly generated private and public rsa key string values.**
+**you can use my [very simple tool](https://github.com/rub3n2000/RsaKeyGenerator) for rsa keys or any other way of generating rsa key.**
+**for the hmac Token which is in appsettings.json you can simply write a long random string or use an online string generator.**
+
+**Nodejs auth project have a secret.js authKey which should be a new long random string.**
+
+**It will ask you which type of project you want to generate.**
 
 #### Currently there are 11 types included:
 
@@ -80,6 +88,13 @@ and the frontend starts with a login form / register form, and redirects to the 
                        x unit test folders also included, for those who wish to do unit and integration testing on the backend.
 
 **dotnet6ReactwAuth** A Dotnet 6.0 wrapper project, with prebuilt auth in backend and frontend. It serves a parcel react frontend,
+                     with a login form and register form, and a secret page you must login to see, at /*. While it serves  
+                     api at /api/{route}.
+                     Only routes prefixed by /api/ will not return frontend.
+                     x unit test folders also included, for those who wish to do unit and integration testing on the backend.
+                     Default database is a local sqlite db that gets created within the project. Feel free to replace it.
+
+**dotnet6ReactwAuthRsa** A Dotnet 6.0 wrapper project, with prebuilt auth in backend and frontend. It serves a parcel react frontend,
                      with a login form and register form, and a secret page you must login to see, at /*. While it serves  
                      api at /api/{route}.
                      Only routes prefixed by /api/ will not return frontend.
@@ -234,6 +249,21 @@ Frontend should be at any route that doesnt start with /api/.
 
 #### Dotnet6 React with auth.
 To start dotnet6ReactwAuth simply do
+npm run preStart
+that installs the npm packages neccesary in the Frontend folder as well as dotnet restore, migrating db and updating it.
+Therefore you only have to run it the first time.
+
+If you use it again, you will have to delete the migration folder and the .db files first.
+
+After installing the packages do 
+                npm run server
+To run the actual server serving the app.
+It will hot-restart when you change files in frontend, or backend.
+
+To test that the api works, and not only the frontend, you can simply attempt to register and then login at /*.
+
+#### Dotnet6 React with auth RSA.
+To start dotnet6ReactwAuthRsa simply do
 npm run preStart
 that installs the npm packages neccesary in the Frontend folder as well as dotnet restore, migrating db and updating it.
 Therefore you only have to run it the first time.

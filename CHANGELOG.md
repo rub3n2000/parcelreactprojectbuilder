@@ -1,3 +1,7 @@
+## 3.2.0 (February 22, 2022)
+
+* Added a dotnet react auth project template for rsa token authentication.
+
 ## 3.1.0 (December 14, 2021)
 
 ## All dotnet templates ParcelReactGenerator
