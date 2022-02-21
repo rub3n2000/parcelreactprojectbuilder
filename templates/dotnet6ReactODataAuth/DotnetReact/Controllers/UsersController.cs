@@ -20,7 +20,6 @@ public class UsersController : Controller
             this._repo = repo;
             this._mapper = mapper;
         }
-        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {

@@ -32,18 +32,26 @@ namespace DotnetReact
             services.AddScoped<IAuthRepository, AuthRepository>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
-                options  =>
+                options =>
                 {
-                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters{
+                    options.IncludeErrorDetails = true;
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(
-                           System.Text.Encoding.ASCII.GetBytes(Configuration.GetValue<string>("Token"))
+                           System.Text.Encoding.UTF8.GetBytes(Configuration.GetValue<string>("Token"))
                         ),
-                        ValidateAudience = false,
-                        ValidateIssuer = false
+                        ValidateAudience = true,
+                        ValidAudience = "Auth",
+                        ValidIssuer = "Auth",
+                        RequireSignedTokens = true,
+                        RequireExpirationTime = true, // <- JWTs are required to have "exp" property set
+                        ValidateLifetime = true, // <- the "exp" will be validated
+                        ValidateIssuer = true
                     };
                 }
             );
+
             services.AddControllers();
             services.AddControllersWithViews(o => {
                 o.UseGeneralRoutePrefix("api/");
@@ -63,8 +71,8 @@ namespace DotnetReact
             //app.UseHttpsRedirection();
             app.UseRouting();
             
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {   
                 endpoints.MapControllerRoute(name: "default",

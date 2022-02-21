@@ -19,7 +19,6 @@ namespace DotnetReact.Controllers
             this._repo = repo;
             this._mapper = mapper;
         }
-        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -28,7 +27,7 @@ namespace DotnetReact.Controllers
             return Ok(usersToReturn);
         }
 
-        [HttpGet] [AllowAnonymous]
+        [HttpGet]
         [Route("{username}")]
         public async Task<IActionResult> GetUser([FromRoute] string username)
         {

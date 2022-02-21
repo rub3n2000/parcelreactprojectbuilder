@@ -48,8 +48,10 @@ const AuthenticationService = {
                 "/users/" +
                     (jwt_decode(
                         localStorage.getItem("access_token") as string
-                    ) as any).nameid
-            );
+                    ) as any).sub
+            , {
+                headers: { Authorization: `Bearer ${localStorage.getItem("access_token")}`}
+            });
             if (response.status == OKSTATUSCODE) {
                 return response.data;
             }

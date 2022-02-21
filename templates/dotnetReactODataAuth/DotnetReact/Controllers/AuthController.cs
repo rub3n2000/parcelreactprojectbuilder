@@ -50,25 +50,29 @@ namespace DotnetReact.Controllers
                     return Unauthorized();
                 }
 
-                var claims = new[]{
-                    new Claim(ClaimTypes.NameIdentifier, userFromRepo.Username.ToString())
-                };
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_config.GetValue<string>("Token").ToString()));
             
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetValue<string>("Token").ToString()));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 
-                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+                DateTime jwtDate = DateTime.Now;
 
-                var tokenDescriptor = new SecurityTokenDescriptor{
-                    Subject = new ClaimsIdentity(claims),
-                    Expires = System.DateTime.Now.AddDays(1).ToUniversalTime(),
-                    SigningCredentials = creds
-                };
+                var jwt = new JwtSecurityToken(
+                    claims: new Claim[] {new Claim(JwtRegisteredClaimNames.Sub, userFromRepo.Username),
+                            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                            new Claim(JwtRegisteredClaimNames.Email, "test@test.com"),
+                            new Claim("id", "Customer_Test"),
+                            new Claim("Testcertified", "true"),
+                            new Claim("Testing", "true")},
+                    notBefore: jwtDate,
+                    audience: "Auth",
+                    issuer: "Auth",
+                    expires: jwtDate.AddHours(24),
+                    signingCredentials: creds
+                );
 
-                var tokenHandler = new JwtSecurityTokenHandler();
+                string tokenValue = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-
-                return Ok(new {token = tokenHandler.WriteToken(token)});
+                return Ok(new {token = tokenValue});
             }
         }
 }

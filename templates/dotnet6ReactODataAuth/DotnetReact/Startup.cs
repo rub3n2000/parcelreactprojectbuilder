@@ -37,14 +37,20 @@ namespace DotnetReact
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
                 options =>
                 {
+                    options.IncludeErrorDetails = true;
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(
-                           System.Text.Encoding.ASCII.GetBytes(Configuration.GetValue<string>("Token"))
+                           System.Text.Encoding.UTF8.GetBytes(Configuration.GetValue<string>("Token"))
                         ),
-                        ValidateAudience = false,
-                        ValidateIssuer = false
+                        ValidateAudience = true,
+                        ValidAudience = "Auth",
+                        ValidIssuer = "Auth",
+                        RequireSignedTokens = true,
+                        RequireExpirationTime = true, // <- JWTs are required to have "exp" property set
+                        ValidateLifetime = true, // <- the "exp" will be validated
+                        ValidateIssuer = true
                     };
                 }
             );
