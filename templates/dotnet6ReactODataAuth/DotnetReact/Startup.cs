@@ -83,8 +83,8 @@ namespace DotnetReact
             //app.UseHttpsRedirection();
             app.UseRouting();
             
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {   
                 endpoints.MapControllerRoute(name: "default",

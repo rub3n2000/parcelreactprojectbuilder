@@ -1,3 +1,7 @@
+## 3.2.1 (February 22, 2022)
+
+* Fixed authentication through jwt for dotnet 6 odata auth template
+
 ## 3.2.0 (February 22, 2022)
 
 * Added a dotnet react auth project template for rsa token authentication.
