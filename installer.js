@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
-const inquirer = require("inquirer");
-const fs = require("fs");
-const ncp = require("ncp");
+import inquirer from 'inquirer';
+import fs from "fs";
+import ncp from "ncp";
+
+import path from 'path';
+import {fileURLToPath} from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const CURR_DIR = process.cwd();
 const CHOICES = fs.readdirSync(`${__dirname}/templates`);

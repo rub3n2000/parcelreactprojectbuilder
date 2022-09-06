@@ -1,3 +1,7 @@
+## 3.2.2 (September 6, 2022)
+
+* Fixed 'Cannot use import statement outside a module" error.
+
 ## 3.2.1 (February 22, 2022)
 
 * Fixed authentication through jwt for dotnet 6 odata auth template
