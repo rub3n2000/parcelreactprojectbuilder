@@ -94,7 +94,7 @@ and the frontend starts with a login form / register form, and redirects to the 
                      x unit test folders also included, for those who wish to do unit and integration testing on the backend.
                      Default database is a local sqlite db that gets created within the project. Feel free to replace it.
 
-**dotnet6ReactwAuthRsa** A Dotnet 6.0 wrapper project, with prebuilt auth in backend and frontend. It serves a parcel react frontend,
+**dotnet6ReactwRsaAuth** A Dotnet 6.0 wrapper project, with prebuilt auth in backend and frontend. It serves a parcel react frontend,
                      with a login form and register form, and a secret page you must login to see, at /*. While it serves  
                      api at /api/{route}.
                      Only routes prefixed by /api/ will not return frontend.
@@ -263,7 +263,7 @@ It will hot-restart when you change files in frontend, or backend.
 To test that the api works, and not only the frontend, you can simply attempt to register and then login at /*.
 
 #### Dotnet6 React with auth RSA.
-To start dotnet6ReactwAuthRsa simply do
+To start dotnet6ReactwRsaAuth simply do
 npm run preStart
 that installs the npm packages neccesary in the Frontend folder as well as dotnet restore, migrating db and updating it.
 Therefore you only have to run it the first time.
