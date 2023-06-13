@@ -1,3 +1,6 @@
+## 3.2.4 (June 13, 2023)
+* Remove dotnet 3 options.
+
 ## 3.2.3 (June 13, 2023)
 * Various security patches within npm dependencies. Removed package-lock files for less deprecation over time.
 
