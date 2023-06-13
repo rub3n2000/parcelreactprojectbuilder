@@ -80,7 +80,7 @@ router.post("/login", function (req, res) {
 
 router.get("/me", function (req, res) {
 	if (req.user) {
-		User.findById(req.user._id, function (err, user) {
+		User.findById(req.user._id).then((err, user) => {
 			if (err) {
 				res.send(err);
 			} else {
@@ -94,7 +94,7 @@ router.get("/me", function (req, res) {
 
 router.get("/AmIAdmin", function (req, res) {
 	if (req.user) {
-		User.findById(req.user._id, function (err, user) {
+		User.findById(req.user._id).then((err, user) => {
 			if (err) {
 				res.send(err);
 			} else {

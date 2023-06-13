@@ -1,5 +1,9 @@
 # Parcel-React Project-Builder w/ express & dotnet core backend alternatives.
 
+**This is a hobby project made by one person and rarely updated. It's templates are meant as a starting point for projects,**
+**I don't recommend using the code as is for production environments.**
+**You are meant to build on the code, update dependencies to newer versions if you desire, exchange some packages for others that fit your needs etc.**
+
 A cra alternative, template builder for react apps with parcel and typescript.
 
 As well as options for express backend as wrapper api combo,

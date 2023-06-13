@@ -1,3 +1,6 @@
+## 3.2.3 (June 13, 2023)
+* Various security patches within npm dependencies. Removed package-lock files for less deprecation over time.
+
 ## 3.2.2 (September 6, 2022)
 
 * Fixed 'Cannot use import statement outside a module" error.
